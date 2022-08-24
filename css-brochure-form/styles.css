@@ -1,0 +1,79 @@
+* {
+  font-family: sans-serif, Arial;
+}
+
+.container {
+  margin: 100px;
+}
+
+h3 {
+  color: #ec5e58;
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: "Brandon Grotesque", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("BrandonGrotesque-Regular.woff2") format("woff2");
+}
+
+.textbox-title {
+  color: #3b3b3b;
+}
+
+.top-padding {
+  padding-top: 3px;
+}
+
+.padding {
+  padding-top: 20px;
+}
+
+.textbox {
+  border-radius: 5px;
+  border: solid #d1d5d4;
+  width: 100%;
+  height: 40px;
+  padding-left: 8px;
+}
+
+select.textbox {
+  font-size: 15px;
+  padding-left: 8px;
+  background-color: #f3f3f3;
+}
+
+#select {
+  font-size: 13px;
+}
+
+.box-label {
+  font-size: 15px;
+  padding-left: 8px;
+  color: #464a49;
+  font-family: "Brandon Grotesque", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("BrandonGrotesque-Regular.woff2") format("woff2");
+}
+
+::placeholder {
+  color: #a4aaa9;
+}
+
+button {
+  border: none;
+  width: 90px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ec5e58;
+  color: white;
+  font-size: 13px;
+  font-family: "Brandon Grotesque", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url("BrandonGrotesque-Regular.woff2") format("woff2");
+}
+
+.submit-btn-alignment {
+  text-align: right;
+}
