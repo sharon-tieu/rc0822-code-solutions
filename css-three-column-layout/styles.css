@@ -52,8 +52,9 @@ p {
     u+fffd;
 }
 
-p {
+h3 + p {
   font-size: 14px;
+  color: #c4d3dd;
 }
 
 .padding {
