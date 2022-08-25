@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 5px 20px;
+}
+
+h1,
+h3 {
+  font-family: Karla, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/s/karla/v7/qkBWXvYC6trAT7zuC8m5xLtlmgzD.woff2") format("woff2");
+  color: #0e0e0e;
+}
+
+p {
+  font-family: Karla, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/karla/v7/qkBbXvYC6trAT7RVLtyU5rZP.woff2") format("woff2");
+  font-size: 13px;
+  color: #828282;
+  line-height: 24px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.col-full {
+  width: 100%;
+  text-align: center;
+}
+
+.col-one-fourth {
+  width: calc(100% /4);
+}
+
+.col-half {
+  width: calc(100% /2);
+}
+
+img {
+  width: 100%;
+}
+
+.text-align-c {
+  text-align: center;
+  padding: 0 50px;
+}
+
+button {
+  height: 40px;
+  width: 200px;
+  color: #d14c46;
+  border: solid #d14c46;
+  background-color: white;
+}
+
+.padding {
+  padding: 40px;
+}
