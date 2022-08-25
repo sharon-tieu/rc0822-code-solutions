@@ -33,6 +33,7 @@ p {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .col-full {
@@ -40,16 +41,13 @@ p {
   text-align: center;
 }
 
-.col-one-fourth {
-  width: calc(100% /4);
-}
-
 .col-half {
   width: calc(100% /2);
+  display: flex;
 }
 
 img {
-  width: 100%;
+  width: 25%;
 }
 
 .text-align-c {
@@ -67,4 +65,8 @@ button {
 
 .padding {
   padding: 40px;
+}
+
+.align-items-top {
+  align-items: flex-start;
 }
