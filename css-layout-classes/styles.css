@@ -1,0 +1,32 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+* {
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-one-third {
+  width: 33.33%;
+}
+
+.col-one-fourth {
+  width: 25%;
+}
+
+.col-two-thirds {
+  width: 66.67%;
+}
+
+img {
+  width: 100%;
+}
