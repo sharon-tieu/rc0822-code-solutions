@@ -5,6 +5,7 @@
   background-size: cover;
 
   /* your code here */
+  position: relative;
 }
 
 .meme > img {
@@ -36,8 +37,10 @@
 }
 
 .overlay {
-  background: linear-gradient(transparent, rgb(21 20 20 / 75%));
+  background: linear-gradient(transparent, rgb(0 0 0));
 
   /* your code here */
+  position: absolute;
   height: 300px;
+  width: 300px;
 }
