@@ -18,8 +18,8 @@ var vehicle = {
   model: '911 GT3 RS',
   year: '2022'
 };
-vehicle.color = 'blue';
-vehicle.isConvertible = true;
+vehicle['color'] = 'blue';
+vehicle['isConvertible'] = true;
 console.log('value of vehicle["color"]:', vehicle.color);
 console.log('value of vehicle["isConvertible"]:', vehicle.isConvertible);
 console.log('value of vehicle:', vehicle);
