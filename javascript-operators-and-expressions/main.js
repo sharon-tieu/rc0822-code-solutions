@@ -21,7 +21,7 @@ var firstName = 'Naruto';
 var lastName = 'Uzumaki';
 var fullName = firstName + ' ' + lastName;
 console.log('value of fullName:', fullName);
-console.log('typeof fullName:', fullName);
+console.log('typeof fullName:', typeof fullName);
 
 var pH = 7.5;
 var isAcidic = pH < 7.0;
