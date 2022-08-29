@@ -7,7 +7,6 @@ body {
 }
 
 .container {
-  /* border: 1px solid red; */
   padding: 15px 30px;
   margin: 50px;
 }
@@ -249,16 +248,6 @@ h1 {
   font-style: normal;
   font-weight: normal;
   src: url("TiemposHeadline-Regular.woff2") format("woff2");
-}
-
-/* ======== product below ======== */
-
-.red-line {
-  border: 2px solid red;
-}
-
-.blue-line {
-  border: 2px solid blue;
 }
 
 .overlay-product-pg {
