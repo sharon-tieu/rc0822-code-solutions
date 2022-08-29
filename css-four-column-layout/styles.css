@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.font-family-serif-b {
+  font-family: sans-serif, arial, helvetica;
+  font-weight: bold;
+}
+
+.font-family-serif-normal {
+  font-family: sans-serif, arial, helvetica;
+  font-weight: normal;
+  font-size: 14px;
+  color: #525254;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.grey-background-color {
+  background-color: #f7f8fa;
+}
+
+.row {
+  display: flex;
+}
+
+.container {
+  margin: 50px 100px;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-one-fourth {
+  width: calc(100% /6);
+}
+
+.phone-image {
+  width: 100%;
+}
+
+.icon {
+  width: 25%;
+}
+
+.justify-content-c {
+  display: flex;
+  justify-content: center;
+}
+
+.margin-sides-10 {
+  margin: 0 10px;
+}
+
+.text-align-c {
+  text-align: center;
+}
+
+.padding {
+  padding: 20px 10px;
+}
