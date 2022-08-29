@@ -46,8 +46,8 @@ body {
   width: calc(100% /4);
 }
 
-.col-10 {
-  width: 15%;
+.col-8 {
+  width: 8%;
 }
 
 .justify-content-sb {
