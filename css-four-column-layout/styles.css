@@ -34,7 +34,7 @@ body {
   width: 100%;
 }
 
-.col-one-fourth {
+.col-one-sixth {
   width: calc(100% /6);
 }
 
