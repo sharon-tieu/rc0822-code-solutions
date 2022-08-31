@@ -323,8 +323,8 @@ h1 {
 .white-circle-img {
   background-color: rgb(212 94 94);
   border-radius: 50%;
-  height: 120px;
-  width: 120px;
+  height: 200px;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -332,4 +332,22 @@ h1 {
 
 .col-one-third {
   width: calc(100% /3);
+}
+
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.team-member-images {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+}
+
+.font-size-25 {
+  font-size: 25px;
+}
+
+.font-size-14 {
+  font-size: 14px;
 }
