@@ -76,7 +76,8 @@ div > a {
   src: url("avenir.woff2") format("woff2");
 }
 
-.contact-us-btn {
+.contact-us-btn,
+.subscribe-btn {
   color: white;
   background-color: #2a4062;
   border-radius: 5px;
@@ -94,7 +95,6 @@ div > a {
 }
 
 .justify-content-c {
-  display: flex;
   justify-content: center;
 }
 
@@ -228,6 +228,7 @@ h1 {
 }
 
 .flex-wrap {
+  display: flex;
   flex-wrap: wrap;
 }
 
@@ -312,14 +313,6 @@ h1 {
   width: 3%;
 }
 
-.red-line {
-  border: 2px solid red;
-}
-
-.blue-line {
-  border: 2px solid blue;
-}
-
 .white-circle-img {
   background-color: rgb(212 94 94);
   border-radius: 50%;
@@ -350,4 +343,35 @@ h1 {
 
 .font-size-14 {
   font-size: 14px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.email-form-box {
+  border-bottom-color: #d5d5d5;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 500px;
+  height: 60px;
+}
+
+.col-40 {
+  width: 40%;
+}
+
+.blog-images {
+  width: 100%;
+  height: 300px;
+}
+
+.article-heading-text-color {
+  color: #0b4265;
+}
+
+.justify-content-space-around {
+  display: flex;
+  justify-content: space-around;
 }
