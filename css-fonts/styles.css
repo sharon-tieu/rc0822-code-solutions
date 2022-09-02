@@ -1,0 +1,20 @@
+/*
+font-family: 'PT Mono',
+monospace;
+font-family: 'Play',
+sans-serif; */
+
+h1,
+p {
+  font-family: 'Play',
+  sans-serif;
+}
+
+h2 {
+  font-family: 'PT Mono',
+  monospace;
+}
+
+p {
+  line-height: 30px;
+}

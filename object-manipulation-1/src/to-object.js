@@ -1,5 +1,4 @@
 /* exported toObject */
-
 // write a function that will restructure the elements of an array into the structure of an object
 // the return value is an object so assign a variable to an empty object
 // first element of the array will be the key and assign it a new variable
