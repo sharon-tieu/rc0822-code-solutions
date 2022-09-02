@@ -1,0 +1,11 @@
+h1.first-class {
+  color: goldenrod;
+}
+
+h1.different-class {
+  color: indigo;
+}
+
+h1.other-class {
+  color: chartreuse;
+}
