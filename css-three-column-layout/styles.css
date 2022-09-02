@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #1996da;
+  padding: 5px 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.col-full {
+  width: 100%;
+}
+
+.col-one-third {
+  width: calc(100% /3);
+}
+
+h2,
+h3,
+p {
+  text-align: center;
+  color: white;
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wXiWtFCc.woff2") format("woff2");
+  unicode-range:
+    u+0000-00ff,
+    u+0131,
+    u+0152-0153,
+    u+02bb-02bc,
+    u+02c6,
+    u+02da,
+    u+02dc,
+    u+2000-206f,
+    u+2074,
+    u+20ac,
+    u+2122,
+    u+2191,
+    u+2193,
+    u+2212,
+    u+2215,
+    u+feff,
+    u+fffd;
+}
+
+h3 + p {
+  font-size: 14px;
+  color: #c4d3dd;
+}
+
+.padding {
+  padding: 0 5px;
+}
+
+.align-items-c {
+  margin: auto;
+}
+
+.white-circle-img {
+  background-color: white;
+  border-radius: 50%;
+  height: 110px;
+  width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 60%;
+}

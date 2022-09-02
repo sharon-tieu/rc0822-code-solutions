@@ -18,3 +18,4 @@ function compact(array) {
   }
   return newArray;
 }
+
