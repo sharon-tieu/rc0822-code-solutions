@@ -77,8 +77,7 @@ div > a {
 }
 
 .contact-us-btn,
-.subscribe-btn,
-.submit-btn {
+.subscribe-btn {
   color: white;
   background-color: #2a4062;
   border-radius: 5px;
@@ -360,6 +359,26 @@ h1 {
   height: 60px;
 }
 
+.information-form-box {
+  border-bottom-color: #c9c9c9;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 500px;
+  height: 60px;
+}
+
+.text-area-styling {
+  border-bottom-color: #c9c9c9;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: 2px;
+  width: 500px;
+  height: 120px;
+  padding-bottom: 40px;
+}
+
 .col-40 {
   width: 40%;
 }
@@ -378,10 +397,26 @@ h1 {
   justify-content: space-around;
 }
 
-.red-line {
-  border: 2px solid red;
+.submit-btn {
+  color: white;
+  background-color: #2a4062;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  width: 80px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
 }
 
-.blue-line {
-  border: 2px solid blue;
+.padding-30-100 {
+  padding: 30px 200px;
+}
+
+::placeholder {
+  color: #d3d3d4;
+  text-align: center;
+}
+
+.textarea-placeholder-text-color {
+  color: #d3d3d4;
 }
