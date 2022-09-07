@@ -1,17 +1,21 @@
-// var spanElement = document.querySelectorAll('span');
+var spanElement = document.querySelectorAll('span');
 var g = document.querySelector('.g-key');
 var r = document.querySelector('.r-key');
-// var u = document.querySelector('.u-key');
+var currentLetter = spanElement[0].textContent;
+
+// console.log('current letter:', currentLetter);
+// console.log('spanElement[0]:', spanElement[0].textContent);
+// console.log('spanElement[1]:', spanElement[1].textContent);
+// console.log('spanElement[2]:', spanElement[2].textContent);
 
 document.addEventListener('keydown', function (event) {
-  if (event.key !== 'g') {
+  if (event.key !== currentLetter) {
     g.classList.add('text-color-red');
   } else if (event.key === 'g') {
     g.classList.remove('text-color-red');
     g.classList.add('text-color-green');
     g.classList.remove('underline');
     r.classList.add('underline');
-    event.key = '';
   } else if (event.key !== 'r') {
     r.classList.add('text-color-red');
   }
