@@ -6,5 +6,6 @@ contactForm.addEventListener('submit', function (e) {
     email: contactForm.elements.email.value,
     message: contactForm.elements.message.value
   };
+  contactForm.reset();
   console.log(userData);
 });
