@@ -15,8 +15,11 @@ function pick(source, keys) {
   for (var i = 0; i < keys.length; i++) {
     var property = keys[i];
     var value = source[property];
+    // console.log('keys[i]:', keys[i]);
+    // console.log('value:', value);
     if (value !== undefined) {
       newObject[property] = value;
+      // console.log('value:', newObject[property]);
     }
   }
   return newObject;
