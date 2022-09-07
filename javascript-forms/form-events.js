@@ -22,9 +22,9 @@ userName.addEventListener('blur', handleBlur);
 userName.addEventListener('input', handleInput);
 
 userEmail.addEventListener('focus', handleFocus);
-userEmail.addEventListener('blue', handleBlur);
+userEmail.addEventListener('blur', handleBlur);
 userEmail.addEventListener('input', handleInput);
 
 userMessage.addEventListener('focus', handleFocus);
-userMessage.addEventListener('blue', handleBlur);
+userMessage.addEventListener('blur', handleBlur);
 userMessage.addEventListener('input', handleInput);
