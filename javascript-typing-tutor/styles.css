@@ -1,0 +1,15 @@
+.container {
+  margin: 0 auto;
+  border: 2px solid red;
+  text-align: center;
+}
+
+.font-family-typewriter {
+  font-family:
+    "Bree Serif",
+    serif;
+}
+
+.text-color-green {
+  color: #19cd1b;
+}
