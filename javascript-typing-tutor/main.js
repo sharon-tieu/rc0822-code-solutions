@@ -1,11 +1,11 @@
 var spanElement = document.querySelectorAll('span');
+
 var currentIndex = 0;
 
-// console.log('current letter:', currentLetter);
-// console.log('spanElement[0]:', spanElement[0].textContent);
-// console.log('spanElement[1]:', spanElement[1].textContent);
-// console.log('spanElement[2]:', spanElement[2].textContent);
 // console.log('spanElement[6]:', spanElement[6].textContent);
+// console.log('spanElement[14]:', spanElement[14].textContent);
+// console.log('spanElement[19]:', spanElement[19].textContent);
+// console.log('spanElement[25]:', spanElement[25].textContent);
 
 document.addEventListener('keydown', function (event) {
   // currentIndex; // i = 0
@@ -15,7 +15,6 @@ document.addEventListener('keydown', function (event) {
     currentIndex++; // i = 1
     spanElement[currentIndex - 1].className = 'text-color-green'; // i = 0
     spanElement[currentIndex].className = 'font-family-typewriter underline'; // i = 1
-    // spanElement[currentIndex];
   }
   // console.log('event.key:', event.key);
   // console.log('next SpanElement:', spanElement[currentIndex].textContent);
