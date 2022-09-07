@@ -5,6 +5,7 @@ var currentIndex = 0;
 // console.log('spanElement[0]:', spanElement[0].textContent);
 // console.log('spanElement[1]:', spanElement[1].textContent);
 // console.log('spanElement[2]:', spanElement[2].textContent);
+// console.log('spanElement[6]:', spanElement[6].textContent);
 
 document.addEventListener('keydown', function (event) {
   // currentIndex; // i = 0
