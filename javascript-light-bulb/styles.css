@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+
+  /* border: 2px solid blue; */
+  height: 900px;
+}
+
+.justify-content-c {
+  display: flex;
+  justify-content: center;
+}
+
+.align-items-c {
+  display: flex;
+  align-items: center;
+}
+
+.back-light-off {
+  background-color: black;
+}
+
+.bulb {
+  width: 300px;
+  height: 300px;
+  border-radius: 200px;
+  border: none;
+}
+
+.bulb-off {
+  background-color: #252525;
+  box-shadow:
+    0 0 0 5px rgb(22 17 17 / 34.1%),
+    0 0 0 2px rgb(19 18 18),
+    0 0 0 rgb(0 0 0);
+}
+
+.back-light-on {
+  background-color: #fef9f1;
+}
+
+.bulb-on {
+  background-color: #f9ea84;
+  box-shadow:
+    0 0 0 5px rgb(251 238 165 / 34.1%),
+    0 0 0 2px rgb(253 243 204),
+    0 0 0 rgb(253 248 241);
+}
