@@ -2,6 +2,15 @@
   margin: 0 auto;
   border: 2px solid red;
   text-align: center;
+  width: 50%;
+}
+
+.row {
+  display: flex;
+}
+
+.font-size-35 {
+  font-size: 35px;
 }
 
 .font-family-typewriter {
@@ -12,4 +21,16 @@
 
 .text-color-green {
   color: #19cd1b;
+}
+
+.text-color-red {
+  color: red;
+}
+
+.underline {
+  border-bottom: 2px solid black;
+}
+
+span {
+  white-space: normal;
 }
