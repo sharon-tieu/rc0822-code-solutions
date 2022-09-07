@@ -5,14 +5,16 @@
 //    initialization: begin at the beginning of keys
 //    condition: iterate to the end of keys.
 //    final expression: increment
-// //
+// assign keys[i] accesses the property
+// source[key[i]] accesses the value
+// iterate through keys and if the element in keys does NOT equal to undefined then...
+//     attach properties to the newObject and reassign the value to it.
+// return the newObject
 function pick(source, keys) {
   var newObject = {};
   for (var i = 0; i < keys.length; i++) {
     var property = keys[i];
     var value = source[property];
-    // console.log('keys[i]:', keys[i]);
-    // console.log('source[property]:', source[property]);
     if (value !== undefined) {
       newObject[property] = value;
     }
