@@ -31,6 +31,15 @@ button {
   background-color: gray;
 }
 
-button:focus {
+button:focus:active {
   outline: none;
+  transform: translateY(0.25rem);
+}
+
+div:first-child > img.pokeball {
+  transform: rotate(-30deg);
+}
+
+div:last-child > img.pokeball {
+  transform: rotate(30deg);
 }
