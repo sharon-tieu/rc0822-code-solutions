@@ -21,16 +21,30 @@
 
 .text-color-green {
   color: #19cd1b;
+  font-family:
+    "Bree Serif",
+    serif;
 }
 
-.text-color-red {
+span.text-color-red {
   color: red;
+  font-family:
+    "Bree Serif",
+    serif;
 }
 
 .underline {
   border-bottom: 2px solid black;
 }
 
+.underline-red {
+  border-bottom: 2px solid red;
+}
+
 span {
   white-space: normal;
+}
+
+.white-space-pre {
+  white-space: pre;
 }

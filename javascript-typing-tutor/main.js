@@ -1,7 +1,5 @@
 var spanElement = document.querySelectorAll('span');
-var g = document.querySelector('.g-key');
-var r = document.querySelector('.r-key');
-var currentLetter = spanElement[0].textContent;
+var currentIndex = 0;
 
 // console.log('current letter:', currentLetter);
 // console.log('spanElement[0]:', spanElement[0].textContent);
@@ -9,17 +7,17 @@ var currentLetter = spanElement[0].textContent;
 // console.log('spanElement[2]:', spanElement[2].textContent);
 
 document.addEventListener('keydown', function (event) {
-  if (event.key !== currentLetter) {
-    g.classList.add('text-color-red');
-  } else if (event.key === 'g') {
-    g.classList.remove('text-color-red');
-    g.classList.add('text-color-green');
-    g.classList.remove('underline');
-    r.classList.add('underline');
-  } else if (event.key !== 'r') {
-    r.classList.add('text-color-red');
+  // currentIndex; // i = 0
+  if (event.key !== spanElement[currentIndex].textContent) {
+    spanElement[currentIndex].className = 'text-color-red underline-red';
+  } else if (event.key === spanElement[currentIndex].textContent) {
+    currentIndex++; // i = 1
+    spanElement[currentIndex - 1].className = 'text-color-green'; // i = 0
+    spanElement[currentIndex].className = 'font-family-typewriter underline'; // i = 1
+    // spanElement[currentIndex];
   }
   // console.log('event.key:', event.key);
+  // console.log('next SpanElement:', spanElement[currentIndex].textContent);
 });
 
 // if 'g' is NOT pressed
