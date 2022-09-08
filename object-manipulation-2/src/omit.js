@@ -10,17 +10,3 @@
 // set a new variable to keys[i]
 // if it DOES NOT match with properties in source, then push the property and value of that into the new object
 // return the new object
-function omit(source, keys) {
-  var newObject = {};
-  for (var i = 0; i < keys.length; i++) {
-    var keysElement = keys[i];
-    var sourceValues = source[keysElement];
-    // console.log('keys[i]:', keys[i]);
-    // console.log('sourceValues:', sourceValues);
-    // console.log('keysElement in source:', keysElement in source);
-    if (keysElement in source === false) {
-      newObject[keysElement] = sourceValues;
-    }
-  }
-  return newObject;
-}
