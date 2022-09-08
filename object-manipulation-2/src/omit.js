@@ -4,12 +4,10 @@
 //
 function omit(source, keys) {
   var object = {};
-  // console.log('object:', object);
-  // console.log('keyS:', keys);
-  // for (var key in object) {
-  //   if (!keys.includes(key)) {
-
-  //   }
-  // }
+  for (var key in source) {
+    if (!keys.includes(key)) {
+      object[key] = source[key];
+    }
+  }
   return object;
 }
