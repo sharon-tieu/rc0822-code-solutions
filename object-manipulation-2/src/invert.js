@@ -3,16 +3,13 @@
 // the return value is an object so assign a variable to an empty object
 //
 // function invert(source) {
-//   var object = {};
+//   var newObject = {};
 //   for (var key in source) {
 //     var newValue = source[key];
-//     // console.log('key:', key);
 //     newValue = key;
 //     var newKey = source[key];
-//     // console.log('newValue:', newValue);
-//     // console.log('newKey:', newKey);
-//     // console.log('newValue:', newValue);
-//     // console.log('newKey:', newKey);
+//     console.log('newKey:', newKey);
+//     console.log('newValue:', newValue);
+
 //   }
-//   // return object[newKey] = newValue;
 // }
