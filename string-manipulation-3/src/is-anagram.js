@@ -1,39 +1,36 @@
 /* exported isAnagram */
 // write a function that will return a boolean if the strings are anagrams of one another
-// if the length of firstString is not the same as the length of the secondString, then return false
-// for both strings, split the string by each letter of the word, sort it alphabetically, then join them back again
-//    this is used with .split('') to split each letter
-//    sort each letter alphabetically with .sort()
-//    join the letters back together with .join('')
-//        .split('').sort().join('')
-// return firstLetters === secondLetters
-//    this will return a boolean
+// anagrams have the same letters and the same amount of it in both strings
+// write a function that will keep count of every letter in the string and if each of the letters match in count then return true
+// iterate through firstString and secondString separately
+// iterate with for loop
+//   if first[letter] === undefined , then reassign it to 1
 function isAnagram(firstString, secondString) {
-  // debugger;
-  if (firstString.length !== secondString.length) {
-    return false;
+  var first = {};
+  var second = {};
+  firstString = firstString.split(' ').join('');
+  secondString = secondString.split(' ').join('');
+  // iterate through firstString to get the count of all the letters
+  for (var i = 0; i < firstString.length; i++) {
+    var letter = firstString[i];
+    if (first[letter] === undefined) {
+      first[letter] = 1;
+    } else {
+      first[letter]++;
+    }
   }
-  var firstLetters = firstString.split('').sort().join('');
-  var secondLetters = secondString.split('').sort().join('');
-  firstLetters.replaceAll(' ', '');
-  secondLetters.replaceAll(' ', '');
-  // console.log(firstLetters, secondLetters);
-  return firstLetters === secondLetters;
+  for (i = 0; i < secondString.length; i++) {
+    var secondLetter = secondString[i];
+    if (second[secondLetter] === undefined) {
+      second[secondLetter] = 1;
+    } else {
+      second[secondLetter]++;
+    }
+  }
+  for (var key in first) {
+    if (second[key] !== first[key]) {
+      return false;
+    }
+  }
+  return true;
 }
-
-// function isAnagram(firstString, secondString) {
-//   // debugger;
-//   if (firstString.length !== secondString.length) {
-//     return false;
-//   }
-//   var firstLetters = firstString.split('').sort().join('');
-//   var secondLetters = secondString.split('').sort().join('');
-//   for (var i = 0; i < firstLetters.length; i++) {
-//     for (var k = 0; k < secondLetters.length; k++) {
-//       if (firstLetters[i] === secondLetters[k]) {
-//         return true;
-//       }
-//     }
-//   }
-//   return false;
-// }
