@@ -15,6 +15,9 @@ function isAnagram(firstString, secondString) {
   }
   var firstLetters = firstString.split('').sort().join('');
   var secondLetters = secondString.split('').sort().join('');
+  firstLetters.replaceAll(' ', '');
+  secondLetters.replaceAll(' ', '');
+  // console.log(firstLetters, secondLetters);
   return firstLetters === secondLetters;
 }
 
