@@ -9,32 +9,17 @@ var $rightArrow = document.querySelector('.right-arrow');
 
 var $pokemonImage = document.querySelector('.pokemon-image-1');
 
-// IMAGE CAROUSEL
 var $images = ['./images/001.png', './images/004.png', './images/007.png', './images/025.png', './images/039.png'];
-// var circleArray = ['.circle-image-0', '.circle-image-1', '.circle-image-2', '.circle-image-3', '.circle-image-4'];
+// var circleArray = [$circle0, $circle1, $circle2, $circle3, $circle4];
 var count = 0;
 
 // var dotRotation = setInterval(dotCarousel, 2000);
 // function dotCarousel() {
 // var currentDot = circleArray[count];
-// console.log('current:', currentDot);
-// console.log(count);
-// if (count === currentDot) {
-//   count = 0;
-//   currentDot.classList.add('fa-solid');
-// } else {
-//   [count].classList.remove('fa-solid');
-//   [count].classList.add('fa-regular');
-// }
-
 // if (count === circleArray.length - 1) {
 //   count = 0;
-//   var currentDot = document.querySelector('.circle-image-' + count.toString());
-//   console.log(currentDot);
-// } else {
-//   count++;
-
-//   dotRotation = setInterval(dotCarousel, 2000);
+//   currentDot.className.remove('fa-regular');
+//   currentDot.className.add('fa-solid');
 // }
 // }
 
