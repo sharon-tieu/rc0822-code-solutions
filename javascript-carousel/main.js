@@ -15,12 +15,11 @@ var count = 0;
 
 // var dotRotation = setInterval(dotCarousel, 2000);
 // function dotCarousel() {
-// var currentDot = circleArray[count];
-// if (count === circleArray.length - 1) {
-//   count = 0;
-//   currentDot.className.remove('fa-regular');
-//   currentDot.className.add('fa-solid');
-// }
+//   var currentDot = circleArray[count];
+//   if (count === circleArray.length - 1) {
+//     currentDot.className.remove('fa-regular');
+//     currentDot.className.add('fa-solid');
+//   }
 // }
 
 var rightArrowClick = setInterval(rightArrow, 2000);
