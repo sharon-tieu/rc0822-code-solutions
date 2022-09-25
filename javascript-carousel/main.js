@@ -26,15 +26,14 @@ var rightArrowClick = setInterval(rightArrow, 2000);
 // setInterval(carousel, 2000);
 $rightArrow.addEventListener('click', rightArrow);
 function rightArrow() {
-  // clearInterval(carousel);
-  console.log('COUNT:', count);
-  count++;
-  carousel();
   if (count === $images.length - 1) {
     count = 0;
     $pokemonImage.src = $images[0];
+    carousel();
   } else {
+    count++;
     $pokemonImage.src = $images[count];
+    carousel();
     clearInterval(rightArrowClick);
     rightArrowClick = setInterval(rightArrow, 2000);
   }
@@ -45,8 +44,10 @@ function leftArrow() {
   if (count === 0) {
     count = $images.length - 1;
     $pokemonImage.src = $images[$images.length - 1];
+    carousel();
   } else {
     count--;
+    carousel();
     $pokemonImage.src = $images[count];
   }
 }
