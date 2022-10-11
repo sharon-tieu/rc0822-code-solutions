@@ -3,16 +3,16 @@ const $flashImage = document.querySelector('#flash-image');
 const $jokeForm = document.querySelector('#joke-form');
 
 const jokester = {
-  tellJoke: (setup, punchline, renderJokePhrase, appendJokePhrase) => {
+  tellJoke: function (setup, punchline) {
     $jokeForm.classList.add('d-none');
-    const $introStatement = renderJokePhrase('Hey Flash...');
-    appendJokePhrase($introStatement);
+    const $introStatement = this.renderJokePhrase('Hey Flash...');
+    this.appendJokePhrase($introStatement);
     setTimeout(() => {
-      const $jokeSetup = renderJokePhrase(setup);
-      appendJokePhrase($jokeSetup);
+      const $jokeSetup = this.renderJokePhrase(setup);
+      this.appendJokePhrase($jokeSetup);
       setTimeout(() => {
-        const $jokePunchline = renderJokePhrase(punchline);
-        appendJokePhrase($jokePunchline);
+        const $jokePunchline = this.renderJokePhrase(punchline);
+        this.appendJokePhrase($jokePunchline);
         flash.laugh();
       }, 2000);
     }, 2000);
@@ -30,7 +30,7 @@ const jokester = {
 
 const flash = {
   laughingUrl: 'images/flash-laugh.gif',
-  laugh: () => {
+  laugh: function () {
     setTimeout(() => {
       $flashImage.setAttribute('src', this.laughingUrl);
     }, 3000);
@@ -40,7 +40,7 @@ const flash = {
 const handleJokeSubmission = event => {
   event.preventDefault();
   const { setup, punchline } = event.target.elements;
-  jokester.tellJoke(setup.value, punchline.value, jokester.renderJokePhrase, jokester.appendJokePhrase);
+  jokester.tellJoke(setup.value, punchline.value);
 };
 
 $jokeForm.addEventListener('submit', handleJokeSubmission);
