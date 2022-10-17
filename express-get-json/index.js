@@ -12,7 +12,7 @@ app.get('/api/grades', function (req, res) {
   for (const key in grades) {
     data.push(grades[key]);
   }
-  console.error(data);
+  res.json(data);
 });
 
 const grades = {
