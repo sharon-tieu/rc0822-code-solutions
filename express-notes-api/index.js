@@ -105,7 +105,13 @@ app.delete('/api/notes/:id', (req, res) => {
   });
 });
 
-// client can PUT
+// client can replace a note with PUT route
+app.put('/api/notes/:id', (req, res) => {
+  // const id = Number(req.params.id);
+  // const data = notesData;
+  // console.log('data.notes[req.params.id]:', data.notes[req.params.id]);
+
+});
 
 const port = 3000;
 app.listen(port, () => {
