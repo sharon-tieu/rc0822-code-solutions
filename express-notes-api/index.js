@@ -107,10 +107,45 @@ app.delete('/api/notes/:id', (req, res) => {
 
 // client can replace a note with PUT route
 app.put('/api/notes/:id', (req, res) => {
-  // const id = Number(req.params.id);
-  // const data = notesData;
+  const id = Number(req.params.id);
+  const data = notesData;
+  const content = req.body.content;
   // console.log('data.notes[req.params.id]:', data.notes[req.params.id]);
 
+  if (!Number.isInteger(id) || id < 1) {
+    res.status(400).json({
+      error: 'id must be a positive integer'
+    });
+    return;
+  }
+  if (typeof content === 'undefined') {
+    res.status(400).json({
+      error: 'content is a required field'
+    });
+    return;
+  }
+  if (typeof data.notes[id] === 'undefined') {
+    res.status(404).json({
+      error: `cannot find note with id ${id}`
+    });
+    return;
+  }
+  const note = {
+    id,
+    content
+  };
+  data.notes[note.id] = note;
+  const json = JSON.stringify(data, null, 2);
+  fs.writeFile('data.json', json, err => {
+    if (err) {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    } else {
+      res.json(notesData);
+    }
+  });
 });
 
 const port = 3000;
