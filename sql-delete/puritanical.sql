@@ -2,5 +2,5 @@ DELETE
   from
     "films"
   WHERE
-    "rating" = 'G'
+    "rating" != 'G'
   returning *;
