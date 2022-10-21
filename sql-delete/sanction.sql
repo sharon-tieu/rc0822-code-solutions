@@ -1,4 +1,6 @@
 DELETE
-  from "countries"
-  where "countryId" = 70
+  from
+    "countries"
+  where
+    "countryId" = 70
   returning *;
