@@ -41,13 +41,13 @@ app.post('/api/grades', (req, res) => {
   // } = req.body;
   const inputName = req.body.name;
   const inputCourse = req.body.course;
-  const inputScore = req.body.score;
+  const inputScore = Number(req.body.score);
   if (inputName === '' || inputCourse === '' || inputScore === '') {
     return res.status(400).json({
       error: 'Invalid/Missing name, course, or score.'
     });
   }
-  if (!Number.isInteger(inputScore) || (!inputScore > 0 && !inputScore < 100)) {
+  if ((!inputScore > 0 && !inputScore < 100)) {
     return res.status(400).json({
       error: 'Score must be an integer from 0 to 100.'
     });
@@ -80,7 +80,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
       error: 'Invalid/Missing name, course, or score.'
     });
   }
-  if (!Number.isInteger(inputScore) || (!inputScore > 0 && !inputScore < 100)) {
+  if (isNaN(Number(inputScore) || inputScore < 0 || inputScore > 100)) {
     return res.status(400).json({
       error: 'Score must be an integer from 0 to 100.'
     });
