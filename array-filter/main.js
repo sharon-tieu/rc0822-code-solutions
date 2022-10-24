@@ -28,17 +28,6 @@ const startWithE = names => {
 console.log('startWithE:', names.filter(startWithE));
 
 const haveD = names => {
-  for (let i = 0; i < names.length; i++) {
-    if (names[i].includes('D') || names[i].includes('d')) {
-      return true;
-    }
-  }
-  return false;
+  return names.toLowerCase().includes('d');
 };
 console.log('startWithD:', names.filter(haveD));
-
-// const hasD = name => {
-//   return name.toLowerCase().includes('d');
-// };
-// const haveD = names.filter(hasD);
-// console.log('haveD:', haveD);
