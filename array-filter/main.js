@@ -23,12 +23,7 @@ const isOverFive = num => {
 console.log('isOverFive:', numbers.filter(isOverFive));
 
 const startWithE = names => {
-  for (let i = 0; i < names.length; i++) {
-    if (names[0] === 'E') {
-      return true;
-    }
-  }
-  return false;
+  return names[0] === 'E';
 };
 console.log('startWithE:', names.filter(startWithE));
 
@@ -41,3 +36,9 @@ const haveD = names => {
   return false;
 };
 console.log('startWithD:', names.filter(haveD));
+
+// const hasD = name => {
+//   return name.toLowerCase().includes('d');
+// };
+// const haveD = names.filter(hasD);
+// console.log('haveD:', haveD);
