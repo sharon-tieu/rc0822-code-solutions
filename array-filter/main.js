@@ -13,22 +13,12 @@ const names = [
 ];
 
 const isEven = num => {
-  for (let i = 0; i < numbers.length; i++) {
-    if (num % 2 === 0) {
-      return true;
-    }
-  }
-  return numbers > 1;
+  return num % 2 === 0;
 };
 console.log('isEven:', numbers.filter(isEven));
 
 const isOverFive = num => {
-  for (let i = 0; i < numbers.length; i++) {
-    if (num > 5) {
-      return true;
-    }
-  }
-  return numbers > 5;
+  return num > 5;
 };
 console.log('isOverFive:', numbers.filter(isOverFive));
 
