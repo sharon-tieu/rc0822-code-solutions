@@ -54,10 +54,11 @@ app.post('/api/grades', (req, res) => {
   }
   const sql = `
     INSERT INTO "grades" ("name", "score", "course")
-    VALUES ('${inputName}', '${inputScore}', '${inputCourse}')
+    VALUES ($inputName, $inputScore, $inputCourse)
     `;
   // console.log(sql);
-  db.query(sql)
+  const params = [inputName, inputScore, inputCourse];
+  db.query(sql, params)
     .then(result => {
       return res.json({
         message: 'Success.'
