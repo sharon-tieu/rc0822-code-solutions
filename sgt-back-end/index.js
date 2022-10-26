@@ -54,7 +54,7 @@ app.post('/api/grades', (req, res) => {
   }
   const sql = `
     INSERT INTO "grades" ("name", "score", "course")
-    VALUES ($inputName, $inputScore, $inputCourse)
+    VALUES ($1, $2, $3)
     `;
   // console.log(sql);
   const params = [inputName, inputScore, inputCourse];
@@ -86,11 +86,13 @@ app.put('/api/grades/:gradeId', (req, res) => {
       error: 'Score must be an integer from 0 to 100.'
     });
   }
-  const gradeId = Number(req.params.gradeId);
+  // const gradeId = Number(req.params.gradeId);
   const sql = `
     UPDATE "grades"
-    SET "score" = '${inputScore}'
-    WHERE "gradeId" = '${gradeId}'
+    SET "name" = $1,
+        "course" = $2,
+        "score" = $3
+    WHERE "gradeId" = $4
     RETURNING *
   `;
   db.query(sql)
@@ -117,7 +119,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
   let sql = `
     SELECT *
     FROM "grades"
-    WHERE "gradeId" = '${gradeId}'
+    WHERE "gradeId" = $4
   `;
   db.query(sql)
     .then(result => {
@@ -129,7 +131,7 @@ app.delete('/api/grades/:gradeId', (req, res) => {
     });
   sql = `
     DELETE FROM "grades"
-    WHERE "gradeId" = '${gradeId}'
+    WHERE "gradeId" = $4
   `;
   db.query(sql)
     .then(result => {
