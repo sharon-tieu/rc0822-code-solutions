@@ -1,0 +1,48 @@
+button {
+  padding: 1rem;
+  border: 2px solid black;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(0.1rem);
+}
+
+.btn-3clicks {
+  background-color: #351c75;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.btn-6clicks {
+  background-color: #674ea7;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.btn-9clicks {
+  background-color: #e06666;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.btn-12clicks {
+  background-color: #f6b26c;
+  color: #263e36;
+  border-radius: 3px;
+}
+
+.btn-15clicks {
+  background-color: #fdfe00;
+  color: #000;
+  border-radius: 3px;
+}
+
+.btn-18clicks {
+  background-color: #fff;
+  color: #000;
+  border-radius: 3px;
+}
