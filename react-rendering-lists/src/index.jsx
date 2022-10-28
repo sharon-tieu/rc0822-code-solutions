@@ -6,6 +6,7 @@ function ListPokemonItems(props) {
 }
 
 function PokemonList(props) {
+  // console.log('props:', props);
   const pokedexList = props.pokedex;
   const listItems = pokedexList.map(pokemon =>
     <ListPokemonItems key={ pokemon.number.toString()} value={ pokemon.name } />
