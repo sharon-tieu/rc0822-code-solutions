@@ -17,10 +17,6 @@ export default class ValidateInput extends React.Component {
       this.setState({
         password: event.target.value
       });
-    } else {
-      this.setState({
-        isValid: true
-      });
     }
   }
 
