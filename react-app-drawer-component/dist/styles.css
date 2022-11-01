@@ -1,0 +1,77 @@
+* {
+  font-family: sans-serif, "Times New Roman", Times, serif;
+}
+
+.container {
+  border: 1px solid red;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  max-width: 1000px;
+
+  /* padding: 20px 15px; */
+  height: 600px;
+}
+
+/* LAYOUT */
+.row {
+  display: flex;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.column-fourth {
+  width: 25%;
+  border: 1px solid blue;
+}
+
+.column-200 {
+  width: 200px;
+  border: 1px solid blue;
+  background-color: rgb(255 255 255);
+}
+
+.column-790 {
+  width: 790px;
+  border: 1px solid green;
+  background-color: rgb(46 45 45 / 50%);
+}
+
+/* PSEUDO CLASSES */
+.fa-bars:hover {
+  cursor: pointer;
+}
+
+p:hover {
+  cursor: pointer;
+}
+
+/* FONT */
+.menu-heading {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* SPACING */
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.margin-top-20 {
+  margin-top: 20px;
+}
+
+.padding-left-8 {
+  padding-left: 8px;
+}
+
+/* ALIGNMENT */
+.flex-direction-col {
+  flex-direction: column;
+}
+
+.text-align-left {
+  text-align: left;
+}
