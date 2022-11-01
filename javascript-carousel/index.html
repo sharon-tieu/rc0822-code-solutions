@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/2b74d35fac.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- CONTAINER -->
+  <div class="container">
+    <div class="carousel-container">
+      <div class="tab active" data-view="0">
+        <div class="tab" data-view="1"></div>
+        <div class="tab" data-view="2"></div>
+      </div>
+    </div>
+
+    <!-- LEFT ARROW COLUMN -->
+    <div class="row">
+      <div class="col-one-sixth align-items-c justify-content-c">
+        <i class="fa-solid fa-chevron-left fa-3x left-arrow"></i>
+      </div>
+
+      <!-- POKEMON IMAGE -->
+      <div class="column-one-third">
+        <div class="pokemon-image" id="0" data-view="0">
+          <img src="./images/001.png" alt="Pokémon" class="pokemon-image-1">
+        </div>
+      </div>
+
+      <!-- RIGHT ARROW COLUMN -->
+      <div class="col-one-sixth align-items-c justify-content-c">
+        <i class="fa-solid fa-chevron-right fa-3x right-arrow"></i>
+      </div>
+    </div>
+
+    <!-- CIRCLES ROW -->
+    <div class="row justify-content-c padding-top-bottom-10">
+      <i id="circle-image-0" class="fa-solid fa-circle fa-1x padding-left-30"></i>
+      <i id="circle-image-1" class="fa-regular fa-circle fa-1x padding-left-30"></i>
+      <i id="circle-image-2" class="fa-regular fa-circle fa-1x padding-left-30"></i>
+      <i id="circle-image-3" class="fa-regular fa-circle fa-1x padding-left-30"></i>
+      <i id="circle-image-4" class="fa-regular fa-circle fa-1x padding-left-30"></i>
+    </div>
+
+    <!-- CIRCLE FILL -->
+    <!-- <i class="fa-solid fa-circle"></i> -->
+    <script src="main.js"></script>
+</body>
+</html>
