@@ -9,14 +9,6 @@ const account = [
   { type: 'withdrawal', amount: 60 }
 ];
 
-const traits = [
-  { color: 'yellow' },
-  { type: 'electric' },
-  { name: 'pikachu' },
-  { level: 15 },
-  { trainer: 'ash' }
-];
-
 const initialValue = 0;
 const sum = numbers.reduce(
   (previousValue, currentValue) => previousValue + currentValue,
@@ -38,7 +30,14 @@ const balance = account.reduce((sum, currentTransaction) => {
 }, 0);
 console.log('balance:', balance);
 
-const composite = traits.reduce((result, currentTraits) => {
-  return Object.assign(result, currentTraits);
+const traits = [
+  { color: 'yellow' },
+  { type: 'electric' },
+  { name: 'pikachu' },
+  { level: 15 },
+  { trainer: 'ash' }
+];
+const composite = traits.reduce((composite, currentTraits) => {
+  return Object.assign(composite, currentTraits);
 });
 console.log('composite:', composite);
