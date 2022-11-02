@@ -27,30 +27,16 @@ app.get('/api/grades', (req, res, next) => {
       const grades = result.rows;
       res.json(grades);
     })
-    .catch(err => {
-      next(err);
-      // res.status(500).json({
-      //   error: 'an unexpected error occurred'
-      // });
-      throw new ClientError(500, 'an unexpected error occurred');
-    });
+    .catch(err => next(err));
 });
 
 app.post('/api/grades', (req, res, next) => {
   const { name, course } = req.body;
   const score = Number(req.body.score);
   if (!Number.isInteger(score) || score < 0 || score > 100) {
-    // res.status(400).json({
-    //   error: 'score must be an integer between 0 and 100'
-    // });
-    // return;
     throw new ClientError(400, 'score must be an integer between 0 and 100');
   }
   if (!name || !course) {
-    // res.status(400).json({
-    //   error: 'name, course, and score are required fields'
-    // });
-    // return;
     throw new ClientError(400, 'name, course, and score are required fields');
   }
   const sql = `
@@ -64,13 +50,7 @@ app.post('/api/grades', (req, res, next) => {
       const [newGrade] = result.rows;
       res.status(201).json(newGrade);
     })
-    .catch(err => {
-      next(err);
-      // res.status(500).json({
-      //   error: 'an unexpected error occurred'
-      // });
-      throw new ClientError(500, 'an unexpected error occurred');
-    });
+    .catch(err => next(err));
 });
 
 app.get('/api/grades/:gradeId', (req, res, next) => {
@@ -100,13 +80,7 @@ app.get('/api/grades/:gradeId', (req, res, next) => {
         res.json(grade);
       }
     })
-    .catch(err => {
-      next(err);
-      // res.status(500).json({
-      //   error: 'an unexpected error occurred'
-      // });
-      throw new ClientError(500, 'an unexpected error occurred');
-    });
+    .catch(err => next(err));
 });
 
 app.put('/api/grades/:gradeId', (req, res, next) => {
@@ -155,13 +129,10 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
         res.json(updatedGrade);
       }
     })
-    .catch(err => {
-      next(err);
-      // res.status(500).json({
-      //   error: 'an unexpected error occurred'
-      // });
-      throw new ClientError(500, 'an unexpected error occurred');
-    });
+    .catch(err => next(err));
+  // res.status(500).json({
+  //   error: 'an unexpected error occurred'
+  // });
 });
 
 app.delete('/api/grades/:gradeId', (req, res, next) => {
@@ -191,13 +162,10 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
         res.sendStatus(204);
       }
     })
-    .catch(err => {
-      next(err);
-      // res.status(500).json({
-      //   error: 'an unexpected error occurred'
-      // });
-      throw new ClientError(500, 'an unexpected error occurred');
-    });
+    .catch(err => next(err));
+  // res.status(500).json({
+  //   error: 'an unexpected error occurred'
+  // });
 });
 
 app.use(errorMiddleware);
