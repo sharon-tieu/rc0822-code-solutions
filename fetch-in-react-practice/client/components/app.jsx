@@ -65,8 +65,8 @@ export default class App extends React.Component {
       response => response.json()
     ).then(
       data => {
-        const previous = this.state.todos.slice();
-        const updatedTodos = previous.concat(data);
+        const previousTodos = this.state.todos;
+        const updatedTodos = previousTodos.concat(data);
         this.setState({ todos: updatedTodos });
       }
     );
@@ -110,7 +110,7 @@ export default class App extends React.Component {
           response => response.json()
         ).then(
           data => {
-            const previousTodos = this.state.todos.slice();
+            const previousTodos = this.state.todos;
             previousTodos[i] = data;
             this.setState({ todos: previousTodos });
           }
