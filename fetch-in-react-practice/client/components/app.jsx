@@ -94,29 +94,34 @@ export default class App extends React.Component {
      * TIP: Be sure to SERIALIZE the updates in the body with JSON.stringify()
      * And specify the "Content-Type" header as "application/json"
      */
-    for (let i = 0; i < this.state.todos.length; i++) {
-      if (this.state.todos[i].todoId === todoId) {
-        const completed = this.state.todos[i].isCompleted;
-        const completedTodos = {
-          isCompleted: !completed
-        };
-        fetch(`api/todos/${todoId}`, {
-          method: 'PATCH',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(completedTodos)
-        }).then(
-          response => response.json()
-        ).then(
-          data => {
-            const previousTodos = this.state.todos;
-            previousTodos[i] = data;
-            this.setState({ todos: previousTodos });
-          }
-        );
-      }
-    }
+
+    const todos = this.state.todos;
+
+    const todosIndex = todos.map(todo => todo.todoId).indexOf(todoId);
+    // console.log('todosIndex:', todosIndex);
+
+    // if todos item NOT completed, then it is false (isCompleted: false). Otherwise, isCompleted (checked) is true.
+    // when user clicks on item, then it is getting the index of this.state.todos and will mark it as isCompleted: true.
+    const checkedTodos = this.state.todos[todosIndex].isCompleted
+      ? { isCompleted: false }
+      : { isCompleted: true };
+    // console.log('checkedTodos:', checkedTodos);
+    fetch(`api/todos/${todoId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(checkedTodos)
+    })
+      .then(
+        response => response.json()
+      ).then(
+        data => {
+          const updated = [...todos];
+          updated[todosIndex] = data;
+          this.setState({ todos: updated });
+        }
+      );
   }
 
   render() {
