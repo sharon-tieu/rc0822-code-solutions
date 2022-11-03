@@ -35,18 +35,13 @@ app.post('/api/auth/sign-up', (req, res, next) => {
       RETURNING "createdAt", "userId", "username"
     `;
       const params = [username, hashedPassword];
-      db.query(sql, params)
-        .then(result => {
-          const [user] = result.rows;
-
-          res.status(201).json({
-            userId: user.userId,
-            username: user.username,
-            createdAt: user.createdAt
-          });
-        })
-        .catch(err => next(err));
-    }).catch(err => next(err));
+      return db.query(sql, params);
+    })
+    .then(result => {
+      const [user] = result.rows;
+      res.status(201).json(user);
+    })
+    .catch(err => next(err));
   /**
    * Hash the user's password with `argon2.hash()`
    * Then, 😉
