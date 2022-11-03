@@ -5,7 +5,6 @@ const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1l
 
 try {
   const payload = jwt.verify(token, process.env.TOKEN_SECRET);
-  console.log('payload:', payload);
 } catch (err) {
   console.error(err);
 }

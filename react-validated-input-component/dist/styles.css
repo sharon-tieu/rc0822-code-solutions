@@ -1,0 +1,24 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 22px;
+  font-weight: bolder;
+}
+
+p {
+  font-size: 14px;
+  color: rgb(237 102 102);
+}
+
+.fa-xmark,
+.fa-check {
+  margin-left: 10px;
+  font-size: 22px;
+}
+
+.red {
+  color: rgb(247 108 108);
+}
+
+.green {
+  color: rgb(107 167 79);
+}
