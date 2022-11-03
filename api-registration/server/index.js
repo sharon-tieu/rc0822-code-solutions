@@ -35,6 +35,7 @@ app.post('/api/auth/sign-up', (req, res, next) => {
       RETURNING "createdAt", "userId", "username"
     `;
       const params = [username, hashedPassword];
+
       return db.query(sql, params);
     })
     .then(result => {
