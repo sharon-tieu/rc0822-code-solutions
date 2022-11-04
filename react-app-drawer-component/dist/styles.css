@@ -2,15 +2,46 @@
   font-family: sans-serif, "Times New Roman", Times, serif;
 }
 
-.container {
+/* .red-line {
   border: 1px solid red;
+} */
+
+.container {
   margin: 0 auto;
   text-align: center;
   display: flex;
-  max-width: 1000px;
+  max-width: 110rem;
 
   /* padding: 20px 15px; */
-  height: 600px;
+  height: 49rem;
+}
+
+/* MODAL */
+.modal-container-bg {
+  position: absolute;
+  width: 99%;
+  height: 97%;
+  background-color: rgb(46 45 45 / 50%);
+  opacity: 0.99;
+  top: 7px;
+  z-index: 5;
+}
+
+.modal-app-drawer {
+  width: 220px;
+  height: 99.3%;
+  background-color: white;
+  margin-top: 1px;
+  margin-left: 1px;
+  border: 2px solid white;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 /* LAYOUT */
@@ -33,18 +64,31 @@
   background-color: rgb(255 255 255);
 }
 
-.column-790 {
-  width: 790px;
+.column-92-rem {
+  width: 92rem;
   border: 1px solid green;
-  background-color: rgb(46 45 45 / 50%);
+
+  /* background-color: rgb(46 45 45 / 50%); */
 }
 
 /* PSEUDO CLASSES */
+p {
+  text-align: left;
+}
+
 .fa-bars:hover {
   cursor: pointer;
 }
 
 p:hover {
+  cursor: pointer;
+}
+
+.column-92-rem:hover {
+  cursor: pointer;
+}
+
+.modal-container-bg:hover {
   cursor: pointer;
 }
 
@@ -59,8 +103,12 @@ p:hover {
   margin-bottom: 30px;
 }
 
-.margin-top-20 {
-  margin-top: 20px;
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.margin-left-30 {
+  margin-left: 30px;
 }
 
 .padding-left-8 {

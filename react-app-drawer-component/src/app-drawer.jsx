@@ -8,24 +8,29 @@ export default class AppDrawer extends React.Component {
   }
 
   handleClick() {
-    // console.log('click detected!');
+    this.setState({ isClicked: !this.state.isClicked });
   }
 
   render() {
+    let menuBar = 'fa-solid fa-bars fa-xl margin-top-30 margin-left-30';
+    let modal = 'hide';
+    if (this.state.isClicked) {
+      menuBar = 'hide';
+      modal = 'modal-container-bg';
+    }
+
     return (
-    <div className="container">
-      <div className="row">
-        <div className="column-200 flex-direction-col text-align-left padding-left-8">
-          <i className="fa-solid fa-bars fa-2xl margin-top-20" onClick={ this.handleClick }></i>
-          {/* <p className="menu-heading margin-bottom-30">Menu</p>
-          <p className="menu-items">About</p>
-          <p className="menu-items">Get Started</p>
-          <p className="menu-items">Sign In</p> */}
+      <div className="container">
+        <i className={menuBar} onClick={ this.handleClick }></i>
+        <div className={modal} onClick={ this.handleClick }>
+          <div className="modal-app-drawer">
+            <p className="menu-heading margin-bottom-30 margin-left-30">Menu</p>
+            <p className="menu-item margin-left-30">About</p>
+            <p className="menu-item margin-left-30">Get Started</p>
+            <p className="menu-item margin-left-30">Sign-In</p>
+          </div>
         </div>
-        {/* <div className="column-790">
-        </div> */}
       </div>
-    </div>
     );
   }
 }
