@@ -47,7 +47,7 @@ app.post('/api/grades', (req, res) => {
       error: 'Invalid/Missing name, course, or score.'
     });
   }
-  if ((!inputScore > 0 && !inputScore < 100)) {
+  if ((!Number.isInteger(inputScore) > 0 && !Number.isInteger(inputScore) < 100)) {
     return res.status(400).json({
       error: 'Score must be an integer from 0 to 100.'
     });
@@ -111,7 +111,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
 
 app.delete('/api/grades/:gradeId', (req, res) => {
   const gradeId = Number(req.params.gradeId);
-  if (!Number.isInteger(gradeId)) {
+  if (!Number.isInteger(gradeId) && Number.isInteger > 0) {
     return res.status(400).json({
       error: 'Invalid gradeId.'
     });
