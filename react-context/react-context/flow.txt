@@ -1,0 +1,39 @@
+User can sign up:
+  a. user can sign up by filling out the sign up form which consists of username and password
+  b. when the user fills out the necessary fields to continue (signing up with BOTH a username and password),
+    and the data of username and password will be assigned to req.body to be used to sign up again later.
+  c. a new row is inserted in the "users" table of the database so now the User's login information is stored there.
+  d. the User's raw password that is stored in database is hashed (from .hash() method).
+    d.i. this is done by the callback function called once the User data has met the required fields.
+  e. after the user is done signing up and clicks the REGISTER button, the hashrouting function is triggered.
+  f. hash routing to #sign-in is triggered and User is brought to the sign-in page of the application.
+  g. the state of sign-in or sign-up is also triggered to change from sign-up state to sign-in state. This is triggered by handleSubmit.
+
+User can sign in:
+  a. the state is changed to sign-in
+  b. the hash routing in the url is /#sign-in
+  c. the form is now a form for a user to sign in.
+  d. the user will now have to sign in by filling out the sign-in form with their newly formed data
+  e. the username and password information will be obtained from the req.body in the code.
+  f. if there is all the information needed to sign-in, then a database query is done to find the user in the database.
+  g. the username typed in will be matched with the username queried in the database. The username should be unique enough to identify.
+    g.i. I tested to see if i can register twice with the same usernames but different passwords. I did not run into errors on the browser, however, the database did not create a new user with the same username.
+  h. the database will run the query and then send the result back to the client/user.
+  i. the result will trigger the .then() method of the sign-in function, passing in the result from the database
+  j. when the user is found then the user's raw password and hashed password in the database will have to be match verified.
+  k. however, the passwords in the database are HASHED so argon2.verify() has to be used. this method helps compare the hashed password in the database with the password that the user used in the login form.
+    k.i. .verify() HASHES the raw password and sees if the hashed passwords match with each other. This returns a promise. this will be a boolean: false or true.
+  l. if the hashed passwords matches (true), .THEN() function is called.
+  m. once the user login information goes through all the checks and it is validated, the user can now actually be logged in.
+  n. the hash route is changed to '/#'
+
+User can stay in (even if they refresh the page):
+  a. handleSignOut() function has window.localStorage which keeps 'react-context-jwt' key stored in there.
+  b. the localStorage key keeps the user on the same page even upon refreshing.
+    b.i. The jsonwebtoken is stored in localstorage so page refreshes keep the user logged-in or logged-out
+
+
+User can sign out:
+  a. user signs out by clicking the sign-out button and then the hashing route changes back to the '/#sign-in' route
+  b. the page-view is the sign-in view with the sign-in form
+  c. the 'react-context-jwt' key in localStorage is removed when user signs out as it is not longer recognized as a signed-in user because user is not set to null.
