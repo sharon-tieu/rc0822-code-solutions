@@ -1,5 +1,4 @@
 import React from 'react';
-import AppContext from '../lib/app-context';
 
 const styles = {
   page: {
@@ -16,5 +15,3 @@ export default function PageContainer({ children }) {
     </div>
   );
 }
-
-PageContainer.contextType = AppContext;
