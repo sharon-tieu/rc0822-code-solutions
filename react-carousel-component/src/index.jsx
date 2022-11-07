@@ -27,6 +27,11 @@ const images = [
     id: 5,
     title: 'Jigglypuff',
     url: '../images/039.png'
+  },
+  {
+    id: 6,
+    title: 'Cubone',
+    url: '../images/104.png'
   }
 ];
 
