@@ -1,0 +1,125 @@
+* {
+  font-family: sans-serif, "Times New Roman", Times, serif;
+}
+
+/* .red-line {
+  border: 1px solid red;
+} */
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  max-width: 110rem;
+
+  /* padding: 20px 15px; */
+  height: 49rem;
+}
+
+/* MODAL */
+.modal-container-bg {
+  position: absolute;
+  width: 99%;
+  height: 97%;
+  background-color: rgb(46 45 45 / 50%);
+  opacity: 0.99;
+  top: 7px;
+  z-index: 5;
+}
+
+.modal-app-drawer {
+  width: 220px;
+  height: 99.3%;
+  background-color: white;
+  margin-top: 1px;
+  margin-left: 1px;
+  border: 2px solid white;
+}
+
+.hide {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+/* LAYOUT */
+.row {
+  display: flex;
+}
+
+.column-half {
+  width: 50%;
+}
+
+.column-fourth {
+  width: 25%;
+  border: 1px solid blue;
+}
+
+.column-200 {
+  width: 200px;
+  border: 1px solid blue;
+  background-color: rgb(255 255 255);
+}
+
+.column-92-rem {
+  width: 92rem;
+  border: 1px solid green;
+
+  /* background-color: rgb(46 45 45 / 50%); */
+}
+
+/* PSEUDO CLASSES */
+p {
+  text-align: left;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+}
+
+p:hover {
+  cursor: pointer;
+}
+
+.column-92-rem:hover {
+  cursor: pointer;
+}
+
+.modal-container-bg:hover {
+  cursor: pointer;
+}
+
+/* FONT */
+.menu-heading {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+/* SPACING */
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.margin-top-30 {
+  margin-top: 30px;
+}
+
+.margin-left-30 {
+  margin-left: 30px;
+}
+
+.padding-left-8 {
+  padding-left: 8px;
+}
+
+/* ALIGNMENT */
+.flex-direction-col {
+  flex-direction: column;
+}
+
+.text-align-left {
+  text-align: left;
+}
