@@ -13,4 +13,6 @@ function takeSmaller(queue) {
     queue.enqueue(first);
     return next;
   }
+  queue.enqueue(next);
+  return first;
 }
