@@ -6,4 +6,5 @@ function isEmpty(queue) {
   } else {
     return false;
   }
+  // return typeof queue.peek() === 'undefined';
 }
