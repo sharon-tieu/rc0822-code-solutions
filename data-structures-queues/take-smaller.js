@@ -5,14 +5,14 @@ function takeSmaller(queue) {
   if (typeof first === 'undefined') {
     return;
   }
-  const next = queue.dequeue();
-  if (typeof next === 'undefined') {
+  const second = queue.dequeue();
+  if (typeof second === 'undefined') {
     return first;
   }
-  if (first > next) {
+  if (first > second) {
     queue.enqueue(first);
-    return next;
+    return second;
   }
-  queue.enqueue(next);
+  queue.enqueue(second);
   return first;
 }
