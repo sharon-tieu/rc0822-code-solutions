@@ -3,7 +3,6 @@ const app = express();
 app.use(express.json());
 
 const pg = require('pg');
-
 // only create ONE pool for your whole server
 const db = new pg.Pool({
   connectionString: 'postgres://dev:dev@localhost/studentGradeTable',
@@ -31,7 +30,7 @@ app.get('/api/grades', (req, res) => {
     });
 });
 
-app.post('/api/grades', (req, res) => {
+app.post('/api/grades', (req, res, next) => {
   // return res.json(req.body);
   // Line 37 is "object destructuring"
   // const {
@@ -55,6 +54,7 @@ app.post('/api/grades', (req, res) => {
   const sql = `
     INSERT INTO "grades" ("name", "score", "course")
     VALUES ($1, $2, $3)
+    RETURNING *;
     `;
   // console.log(sql);
   const params = [inputName, inputScore, inputCourse];
@@ -72,13 +72,13 @@ app.post('/api/grades', (req, res) => {
     });
 });
 
-app.put('/api/grades/:gradeId', (req, res) => {
+app.put('/api/grades/:gradeId', (req, res, next) => {
   const inputName = req.body.name;
   const inputCourse = req.body.course;
   const inputScore = req.body.score;
   if (inputName === '' || inputCourse === '' || inputScore === '') {
     return res.status(400).json({
-      error: 'Invalid/Missing name, course, or score.'
+      error: 'Invalid/Missing name, course, or score in request header.'
     });
   }
   if (isNaN(Number(inputScore) || inputScore < 0 || inputScore > 100)) {
@@ -95,7 +95,8 @@ app.put('/api/grades/:gradeId', (req, res) => {
     WHERE "gradeId" = $4
     RETURNING *
   `;
-  db.query(sql)
+  const params = [inputName, inputCourse, inputScore];
+  db.query(sql, params)
     .then(result => {
       return res.json(
         result.rows[0]
@@ -109,7 +110,7 @@ app.put('/api/grades/:gradeId', (req, res) => {
     });
 });
 
-app.delete('/api/grades/:gradeId', (req, res) => {
+app.delete('/api/grades/:gradeId', (req, res, next) => {
   const gradeId = Number(req.params.gradeId);
   if (!Number.isInteger(gradeId) && Number.isInteger > 0) {
     return res.status(400).json({
@@ -117,11 +118,12 @@ app.delete('/api/grades/:gradeId', (req, res) => {
     });
   }
   let sql = `
-    SELECT *
-    FROM "grades"
+    DELETE FROM "grades"
     WHERE "gradeId" = $4
+    RETURNING *;
   `;
-  db.query(sql)
+  const params = [gradeId];
+  db.query(sql, params)
     .then(result => {
       if (!result.rows.length) {
         return res.status(404).json({
