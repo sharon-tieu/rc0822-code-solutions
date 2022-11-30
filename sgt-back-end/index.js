@@ -92,7 +92,7 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
     SET "name" = $1,
         "course" = $2,
         "score" = $3
-    WHERE "gradeId" = $4
+    WHERE "gradeId" = $1
     RETURNING *
   `;
   const params = [inputName, inputCourse, inputScore];
