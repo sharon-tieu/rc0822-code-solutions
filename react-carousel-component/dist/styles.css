@@ -1,0 +1,26 @@
+.container {
+  border: 3px solid black;
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+}
+
+.col-one-fourth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% /4);
+}
+
+.col-full {
+  width: 100%;
+}
+
+.fa-circle {
+  margin: 12px 10px;
+}
